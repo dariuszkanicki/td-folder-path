@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Location Path",
+  "description": "Adds folder path to the message list panel",
+  "version": "1.0.0",
+  "author": "Dariusz Kanicki",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "locationPath@dariusz.kanicki.net",
+      "strict_min_version": "115.10.0",
+      "strict_max_version": "129.*"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons": {
+    "48": "icon48.png"
+  },
+  "experiment_apis": {
+    "customColumns": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "customColumns"
+          ]
+        ],
+        "script": "implementation.js"
+      }
+    }
+  }
+}
